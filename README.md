@@ -58,6 +58,8 @@ BepInEx/config/TransmutationTable.prices.txt
 
 ## 安装
 
+**下载**：[Releases](https://github.com/MRLEAFYE/DSP_TransmutationMOD/releases/latest) 里有打包好的 zip（含 manifest，可直接解压到 `BepInEx/plugins/`）。
+
 **推荐**：通过 Thunderstore / 任意 Mod 管理器安装（会自动处理依赖）。
 
 手动安装：
