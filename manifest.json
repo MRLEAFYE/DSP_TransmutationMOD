@@ -1,0 +1,12 @@
+{
+  "name": "TransmutationTable",
+  "version_number": "1.0.0",
+  "website_url": "",
+  "description": "ProjectE 风格 EMC 等价交换：转化桌/转化箱/转化站把任意物品折算成 EMC，再兑换任意已学物品；物品需投入一次才解锁。Convert any item to EMC and back.",
+  "dependencies": [
+    "xiaoye97-BepInEx-5.4.17",
+    "xiaoye97-LDBTool-3.0.3",
+    "CommonAPI-DSPModSave-1.2.2",
+    "CommonAPI-CommonAPI-1.6.7"
+  ]
+}

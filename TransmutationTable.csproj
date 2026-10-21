@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>TransmutationTable</AssemblyName>
+    <RootNamespace>TransmutationTable</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <DebugType>none</DebugType>
+    <Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <!--
+    依赖 DLL 路径：构建前设置这三个环境变量（或在本地 Directory.Build.props 里覆盖）。
+      DYSON_SPHERE_PROGRAM_DIR : 游戏根目录，例如 E:\SteamLibrary\steamapps\common\Dyson Sphere Program
+      BEPINEX_CORE_DIR         : 例如 <profile>\BepInEx\core
+      BEPINEX_PLUGINS_DIR      : 例如 <profile>\BepInEx\plugins
+  -->
+  <PropertyGroup>
+    <DspManagedDir>$(DYSON_SPHERE_PROGRAM_DIR)\DSPGAME_Data\Managed</DspManagedDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(DspManagedDir)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(DspManagedDir)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(DspManagedDir)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(DspManagedDir)\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(DspManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(DspManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(DspManagedDir)\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(BEPINEX_CORE_DIR)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(BEPINEX_CORE_DIR)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="LDBTool">
+      <HintPath>$(BEPINEX_PLUGINS_DIR)\LDBTool\LDBTool.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="DSPModSave">
+      <HintPath>$(BEPINEX_PLUGINS_DIR)\DSPModSave\DSPModSave.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+</Project>
